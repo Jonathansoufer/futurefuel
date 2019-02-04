@@ -6,11 +6,11 @@ import styled from 'styled-components'
 import Card from '../components/Card'
 import loginLogo from '../assets/loginLogo.svg'
 import StyledButton from '../components/Button'
-import { GO_LOGGED, GO_FORGOT } from '../store/ActionTypes'
+import { GO_FORGOT } from '../store/ActionTypes'
 
 import handleCard from '../components/HandleCards'
 
-const LoginContainer = ({ appState, handleAction }) => {
+const LoginContainer = ({ appState, loginName, loginPassword, handleAction, handleNameChange, handlePasswordChange }) => {
   return appState === GO_FORGOT ? (
     <Redirect to={{ pathname: '/forgot' }} />
   ) : (
@@ -25,6 +25,8 @@ const LoginContainer = ({ appState, handleAction }) => {
           <FormGroup controlId='inputFormEmail'>
             <StyledControl
               type='email'
+              value={loginName}
+              onChange={handleNameChange}
             />
           </FormGroup>
           <FormGroup controlId='labelFormPassword'>
@@ -33,6 +35,8 @@ const LoginContainer = ({ appState, handleAction }) => {
           <FormGroup controlId='inputFormPassword'>
             <StyledControl
               type='password'
+              value={loginPassword}
+              onChange={handlePasswordChange}
             />
           </FormGroup>
           <StyledButton variant='primary' type='submit'>

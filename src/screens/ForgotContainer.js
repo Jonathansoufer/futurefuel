@@ -29,7 +29,7 @@ const ForgotContainer = ({ appState, handleLoginAction, handleSubmitAction }) =>
           </FormGroup>
           <StyledButton variant='primary' type='submit' onClick={handleSubmitAction}>
             Request new password
-            {appState === GO_RECOVER ? (<Redirect push to='/recover' />) : null}
+            {appState === GO_RECOVER ? (<Redirect to='/recover' />) : null}
           </StyledButton>
           <StyledFormText onClick={handleLoginAction}>
             Go Back
