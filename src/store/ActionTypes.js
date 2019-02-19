@@ -1,3 +1,5 @@
 export const GO_LOGIN = 'GO_LOGIN'
 export const GO_FORGOT = 'GO_FORGOT'
 export const GO_RECOVER = 'GO_RECOVER'
+export const SAVE_NAME = 'SAVE_NAME'
+export const SAVE_PASSWORD = 'SAVE_PASSWORD'

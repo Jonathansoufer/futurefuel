@@ -12,3 +12,11 @@ export const goForgot = () => ({
 export const goRecover = () => ({
   type: GO_RECOVER
 })
+
+export const saveName = () => ({
+  type: SAVE_NAME
+})
+
+export const savePassword = () => ({
+  type: SAVE_PASSWORD
+})
